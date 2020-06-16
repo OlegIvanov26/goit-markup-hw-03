@@ -81,7 +81,7 @@ nav a {
 .banner-container {
   width: 1600px;
   height: 600px;
-  background-image: url(/images/Header_img.jpg);
+  background-image: url(../images/Header_img.jpg);
   display: flex;
   align-items: center;
   justify-content: center;
