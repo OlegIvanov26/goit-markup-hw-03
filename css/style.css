@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --footer-color: #2f303a;
   --title-mailing: #2196f3;
@@ -5,20 +11,24 @@
 li {
   list-style-type: none;
 }
-body {
-  width: 1600px;
+.section-title {
+  margin-bottom: 50px;
 }
-header {
+.main-section {
+  padding-top: 95px;
+}
+.header-container {
+  width: 100%;
+}
+.section-nav-container {
+  width: 1220px;
+  margin: auto;
   display: flex;
+  align-items: center;
 }
-ul {
-  margin: 0;
-  padding: 0;
-}
-.logo {
-  width: 200px;
-  height: 30px;
-  margin: 25px 0 0 165px;
+.header-section {
+  padding-top: 25px;
+  padding-bottom: 32px;
 }
 .logo-item {
   text-decoration: none;
@@ -53,8 +63,7 @@ nav a {
 }
 .nav-container-item {
   width: 295px;
-  height: 50px;
-  margin: 32px 0 0 90px;
+  margin-left: 135px;
 }
 .nav-list {
   display: flex;
@@ -62,14 +71,13 @@ nav a {
 .nav-item:not(:last-child) {
   margin-right: 50px;
 }
-.adress-item-container {
-  margin: 32px 0 0 305px;
-}
 .adress-list {
   display: flex;
+  width: 330px;
+  margin-left: 305px;
 }
 .adress-item {
-  display: flex;
+  display: inline-flex;
   justify-content: center;
 }
 .adress-item:not(:last-child) {
@@ -82,9 +90,19 @@ nav a {
   color: #757575;
 }
 .banner-container {
-  width: 1600px;
+  max-width: 1600px;
   height: 600px;
-  background-image: url(../images/Header_img.jpg);
+  background-color: #000000;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/Header_img.jpg);
+  background-position: center;
+  background-size: contain;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,23 +127,43 @@ nav a {
   color: #ffffff;
 }
 .advantages-container {
-  width: 1170px;
-  margin: 100px 215px 0 215px;
+  width: 100%;
+}
+.advantages-section {
+  padding-top: 100px;
 }
 .advantages-list {
+  width: 1170px;
+  margin: auto;
   display: flex;
+  border-bottom: 1px solid #ececec;
+}
+.advantages-item {
+  width: 270px;
+}
+.advantages-item::before {
+  content: "";
+  height: 120px;
+  display: block;
+  background-color: #f5f4fa;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 30px;
+}
+.icon-antena::before {
+  background-image: url(../images/antenna_1.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/clock_1.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/diagram_1.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/astronaut_1.svg);
 }
 .advantages-item:not(:last-child) {
-  width: 270px;
-  height: 250px;
   margin-right: 30px;
-}
-.advantages-image-container {
-  width: 270px;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  background-color: #f5f4fa;
 }
 .advantages-title {
   font-family: "roboto";
@@ -135,26 +173,30 @@ nav a {
   font-size: 14px;
   line-height: 16px;
   color: #212121;
+  margin-bottom: 10px;
 }
-.advantages p {
+.advantages-item p {
   font-family: "roboto";
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 24px;
   color: #757575;
+  margin-bottom: 90px;
 }
 .portfolio-container {
-  width: 1170px;
-  height: 385px;
-  margin: 95px 215px 0 215px;
+  width: 100%;
 }
 .portfolio-list {
+  width: 1170px;
+  margin: auto;
   display: flex;
+}
+.portfolio-item {
+  margin-bottom: 95px;
 }
 .portfolio-item:not(:last-child) {
   width: 370px;
-  height: 295px;
   margin-right: 30px;
 }
 .portfolio h2 {
@@ -177,29 +219,30 @@ nav a {
   background-color: rgba(47, 48, 58, 0.8);
 }
 .team-container {
-  width: 1600px;
-  height: 700px;
+  width: 100%;
   background-color: #f5f4fa;
-  margin-top: 95px;
 }
 .team-list {
+  width: 1170px;
+  margin: auto;
   display: flex;
-  margin: 50px 215px 0 215px;
 }
 .team-item {
   width: 270px;
-  height: 425px;
-  margin-right: 30px;
   background-color: #ffffff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
+  margin-bottom: 95px;
+}
+.team-item:not(:last-child) {
+  margin-right: 30px;
 }
 .team-social-network-list {
   width: 205px;
-  height: 45px;
   display: flex;
-  margin: 0 32px 0 32px;
+  margin: auto;
+  margin-bottom: 25px;
 }
 .team-social-network-item:not(:last-child) {
   margin-right: 10px;
@@ -208,8 +251,10 @@ nav a {
 .last-item {
   padding: 0 12px 0 12px;
 }
+.photo-item {
+  margin-bottom: 30px;
+}
 .team h2 {
-  padding-top: 95px;
   text-align: center;
   font-family: "roboto";
   font-style: normal;
@@ -220,13 +265,13 @@ nav a {
 }
 .name-item {
   text-align: center;
-  padding-top: 30px;
   font-family: "roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
   color: #212121;
+  margin-bottom: 10px;
 }
 .specialty {
   text-align: center;
@@ -236,15 +281,15 @@ nav a {
   font-size: 16px;
   line-height: 19px;
   color: #757575;
+  margin-bottom: 15px;
 }
 .customer-container {
-  width: 1600px;
+  width: 100%;
 }
 .customer-list {
   display: flex;
   width: 1170px;
-  height: 185px;
-  margin: 50px 215px 0 215px;
+  margin: auto;
 }
 .customer-item {
   width: 170px;
@@ -252,14 +297,14 @@ nav a {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   display: flex;
+  margin-bottom: 95px;
   align-items: center;
   justify-content: center;
 }
-.item-right:not(:last-child) {
+.customer-item:not(:last-child) {
   margin-right: 30px;
 }
 .customer h2 {
-  padding-top: 95px;
   text-align: center;
   font-family: "roboto";
   font-style: normal;
@@ -272,7 +317,8 @@ footer {
   background-color: var(--footer-color);
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 footer p {
   font-family: "roboto";
@@ -283,15 +329,14 @@ footer p {
   color: rgba(255, 255, 255, 0.4);
 }
 .adress-container {
-  width: 1600px;
+  width: 100%;
   background-color: var(--footer-color);
 }
 .adress {
   background-color: var(--footer-color);
   width: 1170px;
-  height: 195px;
   display: flex;
-  margin: 0 215px 0 215px;
+  margin: auto;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 .logo-adress-bot-container {
@@ -299,7 +344,6 @@ footer p {
 }
 .adress-list-bottom {
   width: 230px;
-  height: 80px;
   flex-direction: column;
   justify-content: center;
   margin-top: 10px;
@@ -309,7 +353,6 @@ footer p {
 }
 .social-network-container {
   width: 205px;
-  height: 80px;
   margin: 56px 0 0 69px;
 }
 .social-network-list-studio {
@@ -326,7 +369,6 @@ footer p {
 }
 .mailing-container {
   width: 570px;
-  height: 87px;
   display: flex;
   margin: 56px 0 0 95px;
 }
@@ -386,18 +428,22 @@ address a {
 }
 .mailing-site {
   width: 200px;
-  height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--title-mailing);
   border-radius: 4px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
 }
-.mailing-site img {
+.mailing-site::after {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon_send.svg);
+  background-size: contain;
+  content: "";
   margin-left: 10px;
 }
-.mailing a {
+.send-mail {
   font-family: "roboto";
   text-decoration: none;
   color: #ffffff;

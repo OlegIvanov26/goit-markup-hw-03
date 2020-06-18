@@ -1,25 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 :root {
   --footer-color: #2f303a;
   --title-mailing: #2196f3;
 }
-body {
-  width: 1600px;
-}
-header {
-  display: flex;
-  border: 1px solid #ececec;
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
 li {
   list-style-type: none;
 }
-.logo {
-  width: 200px;
-  height: 30px;
-  margin: 25px 0 0 215px;
+.header-container {
+  width: 100%;
+  border: 1px solid #ececec;
+}
+.header-section {
+  padding-top: 25px;
+  padding-bottom: 32px;
+}
+.section-nav-container {
+  width: 1170px;
+  margin: auto;
+  display: flex;
+  align-items: center;
 }
 .logo-item {
   text-decoration: none;
@@ -29,8 +33,7 @@ li {
 }
 .nav-container-item {
   width: 295px;
-  height: 50px;
-  margin: 32px 0 0 85px;
+  margin-left: 80px;
 }
 .nav-list {
   display: flex;
@@ -38,11 +41,9 @@ li {
 .nav-item:not(:last-child) {
   margin-right: 50px;
 }
-.adress-item-container {
-  margin: 32px 0 0 305px;
-}
 .adress-list {
   display: flex;
+  margin-left: 305px;
 }
 .adress-item {
   display: flex;
@@ -82,10 +83,12 @@ nav a {
 .number-site {
   color: #757575;
 }
+.navigation-section {
+  padding-top: 95px;
+}
 .navigation-container {
   width: 610px;
-  height: 55px;
-  margin: 95px 495px 0 495px;
+  margin: auto;
 }
 .navigtion-list {
   display: flex;
@@ -94,25 +97,32 @@ nav a {
   background-color: #f5f4fa;
   border-radius: 4px;
   padding: 6px 22px 6px 22px;
+  margin-bottom: 50px;
 }
 .item-position:not(:last-child) {
   margin-right: 8px;
 }
 .main-item-container {
   width: 1200px;
-  margin: 50px 215px 0 215px;
+  margin: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 .main-list {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 95px;
 }
 .main-item {
   width: 370px;
   border: 1px solid #eeeeee;
   border-radius: 5px;
-  margin: 0 30px 0 0;
+  margin-right: 30px;
+}
+.signature {
+  width: 320px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 .main-item:nth-child(3n) {
   margin-right: 0;
@@ -146,15 +156,15 @@ nav a {
   color: #757575;
 }
 .adress-container {
-  width: 1600px;
+  width: 100%;
   background-color: var(--footer-color);
-  margin-top: 95px;
 }
 footer {
   background-color: var(--footer-color);
   display: flex;
   justify-content: center;
-  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 footer p {
   font-family: "roboto";
@@ -165,23 +175,22 @@ footer p {
   color: rgba(255, 255, 255, 0.4);
 }
 .adress-container {
-  width: 1600px;
+  width: 100%;
   background-color: var(--footer-color);
 }
 .adress {
   background-color: var(--footer-color);
   width: 1170px;
-  height: 195px;
   display: flex;
-  margin: 0 215px 0 215px;
+  margin: auto;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 30px;
 }
 .logo-adress-bot-container {
   margin-top: 48px;
 }
 .adress-list-bottom {
   width: 230px;
-  height: 80px;
   flex-direction: column;
   justify-content: center;
   margin-top: 10px;
@@ -191,8 +200,7 @@ footer p {
 }
 .social-network-container {
   width: 205px;
-  height: 80px;
-  margin: 56px 0 0 69px;
+  margin: 55px 0 0 70px;
 }
 .social-network-list-studio {
   display: flex;
@@ -217,7 +225,6 @@ footer p {
 }
 .mailing-site {
   width: 200px;
-  height: 50px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   background-color: var(--title-mailing);
   border-radius: 4px;
@@ -227,11 +234,15 @@ footer p {
 }
 .mailing-container {
   width: 570px;
-  height: 87px;
   display: flex;
-  margin: 56px 0 0 95px;
+  margin: 55px 0 0 95px;
 }
-.mailing-site img {
+.mailing-site::after {
+  width: 24px;
+  height: 24px;
+  background-image: url(../images/icon_send.svg);
+  background-size: contain;
+  content: "";
   margin-left: 10px;
 }
 
@@ -278,7 +289,7 @@ address a {
   text-transform: uppercase;
   color: #ffffff;
 }
-.mailing a {
+.send-mail {
   font-family: "roboto";
   text-decoration: none;
   background-color: var(--title-mailing);
