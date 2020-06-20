@@ -11,6 +11,9 @@
 li {
   list-style-type: none;
 }
+.invisible-item {
+  display: none;
+}
 .header-container {
   width: 100%;
   border: 1px solid #ececec;
